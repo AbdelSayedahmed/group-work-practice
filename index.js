@@ -5,9 +5,30 @@
  * @returns {number} - The total area of all rectangles.
  */
 function calculateTotalArea(rectangles) {
+
+  return rectangles.reduce ((totalArea, [length, width]) => totalArea + length * width, 0);
   // Implementation is intentionally omitted in this file.
 }
+const rectangles = [[1, 2],[3, 4], [8, 10]]
 
+console.log("total area of rectangles", calculateTotalArea(rectangles));
+
+function add(a, b) {
+  return a + b
+}
+
+console.log(add (1, 2));
+
+function one(number) {
+  return number * number 
+}
+console.log(one (2))
+
+function element(one, two, three) {
+  return one * two * three
+}
+
+console.log(element (2, 5, 6))
 /**
  * Finds and returns the largest element in an array of numbers.
  *
@@ -78,5 +99,12 @@ const mergeSortedArrays = (arr1, arr2) => {
  * @returns {number} - The factorial of the given number.
  */
 function calculateFactorial(n) {
+  if (n < 0) return undefined
+  let result = 1; 
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
   // Implementation is intentionally omitted in this file.
 }
+console.log("factorial of 5", calculateFactorial(5));
