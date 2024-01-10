@@ -27,8 +27,19 @@ function findLargestElement(numbers) {
  * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
 function isPalindrome(inputString) {
+  if(inputString===inputString.split(``).reverse().join(``)){
+
+    return true
+  }
+  else return false
+
   // Implementation is intentionally omitted in this file.
 }
+
+
+
+
+
 
 /**
  * Counts the occurrences of a specific element in an array.
