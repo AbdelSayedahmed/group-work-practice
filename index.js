@@ -15,7 +15,9 @@ function calculateTotalArea(rectangles) {
  * @returns {number|null} - The largest element or null if the array is empty.
  */
 function findLargestElement(numbers) {
-  // Implementation is intentionally omitted in this file.
+  numbers = numbers.sort((a, b) => b - a);
+
+  return numbers.length ? numbers[0] : null;
 }
 
 /**
@@ -46,8 +48,10 @@ function countOccurrences(array, targetElement) {
  * @param {number[]} arr2 - The second sorted array.
  * @returns {number[]} - The merged and sorted array.
  */
-function mergeSortedArrays(arr1, arr2) {
-  // Implementation is intentionally omitted in this file.
+const mergeSortedArrays = (arr1, arr2) => {
+  const newArr = [];
+  
+  return newArr.concat(arr1, arr2).sort((a, b) => a - b);
 }
 
 /**
